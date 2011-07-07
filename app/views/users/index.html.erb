@@ -1,0 +1,33 @@
+<h1 style="color:yellow">Listing users</h1>
+
+<table id="standard_table">
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Sex</th>
+    <th>Age</th>
+    <th>Contact</th>
+  </tr>
+  <% i=0 %>
+  <% @users.each do |user| %>
+    <% i= i+1 %>
+    <% if(i%2==0) %>
+      <tr class="alt">
+      <% else %>
+      <tr class="alt1">
+      <% end %>
+      <td><center><%= link_to("#{user.name}",user) %>
+        <%= link_to image_tag("edit_icon.png",:width => 15,:height=>15), edit_user_path(user) %>
+        <%= link_to image_tag("delete_icon.png",:width => 15,:height=>15), user, :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+      <td><%= user.city %></td>
+      <td><%= user.sex %></td>
+      <td><%= user.age %></td>
+      <td><%= user.contact %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>
