@@ -13,7 +13,7 @@ gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'execjs'
-
+gem 'pg'
 gem 'therubyracer'
 gem 'jquery-rails'
 
