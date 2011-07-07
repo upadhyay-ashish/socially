@@ -12,7 +12,9 @@ gem 'rake','0.8.7'
 gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
+gem 'execjs'
 
+gem 'therubyracer'
 gem 'jquery-rails'
 
 # Use unicorn as the web server
